@@ -8,14 +8,12 @@ pipeline {
  }
  stage('Test') {
  steps {
- sh 'pipenv run pytest || echo "Sin tests
-definidos"'
+ sh 'pipenv run pytest || echo "Sin tests definidos"'
  }
  }
  stage('Analyze') {
  steps {
- echo 'Análisis de calidad de código (puede
-integrarse con SonarQube aquí)'
+ echo 'Análisis de calidad de código (puede integrarse con SonarQube aquí)'
  }
  }
  stage('Dependency Management') {
@@ -28,8 +26,7 @@ sh 'pipenv update'
  stage('Deploy') {
 
  steps {
- echo 'Desplegando aplicación en entorno de prueba
-(simulado)...'
+ echo 'Desplegando aplicación en entorno de prueba (simulado)...'
  }
  }
  }
